@@ -23,6 +23,7 @@ const App = () => {
         <Blog />
         <Callback />
         <Footer />
+        
       </div>
     </>
   );

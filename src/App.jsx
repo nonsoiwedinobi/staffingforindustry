@@ -8,6 +8,7 @@ import Reviews from "./components/Reviews";
 import Blog from "./components/Blog";
 import Callback from "./components/Callback";
 import Footer from "./components/Footer";
+import EnvTest from "./EnvTest";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Blog />
         <Callback />
         <Footer />
+        <EnvTest />
       </div>
     </>
   );

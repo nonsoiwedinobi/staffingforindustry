@@ -9,6 +9,7 @@ const Navbar = () => {
 
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
+    document.body.style.overflow = mobileDrawerOpen ? "auto" : "hidden";
   };
 
   useEffect(() => {
@@ -24,8 +25,9 @@ const Navbar = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = "auto"; // Reset overflow when component unmounts
     };
-  }, []);
+  }, [mobileDrawerOpen]);
 
   return (
     <nav
@@ -33,7 +35,10 @@ const Navbar = () => {
         isScrolled ? "bg-black" : "bg-transparent"
       }`}
     >
-      <div className="container px-4 mx-auto relative lg:text-sm">
+      <div
+        className="container px-10 mx-auto relative lg:text-sm"
+        style={{ maxWidth: "100%", overflow: "visible" }}
+      >
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <span className="text-2xl lg:text-3xl tracking-tight text-white">
@@ -52,41 +57,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="hidden lg:flex justify-center space-x-2 items-center">
-            <div className="relative">
-              <button
-                className="bg-transparent py-2 px-4 border-none cursor-pointer flex items-center text-lg lg:text-xl text-white"
-                id="lang-btn"
-              >
-                English
-                <span id="arrow-icon" className="ml-1 text-xs">
-                  &#9660;
-                </span>
-              </button>
-              <ul
-                className="hidden absolute top-full left-0 bg-white border border-gray-300 shadow-md list-none mt-2 w-full z-10 rounded-lg"
-                id="language-dropdown"
-              >
-                <li
-                  className="py-2 px-3 flex cursor-pointer text-black hover:bg-gray-200"
-                  data-lang="en"
-                >
-                  English
-                </li>
-                <li
-                  className="py-2 px-3 flex cursor-pointer text-black hover:bg-gray-200"
-                  data-lang="fr"
-                >
-                  French
-                </li>
-                <li
-                  className="py-2 px-3 flex cursor-pointer text-black hover:bg-gray-200"
-                  data-lang="nl"
-                >
-                  Dutch
-                </li>
-              </ul>
-            </div>
+          <div className="hidden lg:flex justify-center space-x-2 items-center relative">
             <a
               href="#"
               className="bg-amber-400 py-2 px-3 rounded-lg whitespace-nowrap"
@@ -101,52 +72,26 @@ const Navbar = () => {
           </div>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+          <div className="fixed inset-0 z-20 bg-neutral-900 p-12 flex flex-col justify-center items-center lg:hidden overflow-hidden">
+            <button
+              onClick={toggleNavbar}
+              className="absolute top-4 right-4 text-white"
+            >
+              <X />
+            </button>
             <ul>
               {navItems.map((item, index) => (
                 <li
                   key={index}
                   className="py-4 text-lg lg:text-xl text-white hover:text-amber-400"
                 >
-                  <a href={item.href}>{item.label}</a>
+                  <a href={item.href} onClick={toggleNavbar}>
+                    {item.label}
+                  </a>
                 </li>
               ))}
             </ul>
-            <div className="flex space-x-6">
-              <div className="relative">
-                <button
-                  className="bg-transparent py-2 px-4 border-none cursor-pointer flex items-center text-lg lg:text-xl text-white"
-                  id="lang-btn"
-                >
-                  English
-                  <span id="arrow-icon" className="ml-1 text-xs">
-                    &#9660;
-                  </span>
-                </button>
-                <ul
-                  className="hidden absolute top-full left-0 bg-white border border-gray-300 shadow-md list-none mt-2 w-full z-10 rounded-lg"
-                  id="language-dropdown"
-                >
-                  <li
-                    className="py-2 px-3 flex cursor-pointer text-black hover:bg-gray-200"
-                    data-lang="en"
-                  >
-                    English
-                  </li>
-                  <li
-                    className="py-2 px-3 flex cursor-pointer text-black hover:bg-gray-200"
-                    data-lang="fr"
-                  >
-                    French
-                  </li>
-                  <li
-                    className="py-2 px-3 flex cursor-pointer text-black hover:bg-gray-200"
-                    data-lang="nl"
-                  >
-                    Dutch
-                  </li>
-                </ul>
-              </div>
+            <div className="flex space-x-6 mt-4">
               <a href="#" className="py-2 px-3 bg-amber-400 rounded-lg">
                 Submit Resume
               </a>

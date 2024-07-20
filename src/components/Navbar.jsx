@@ -104,7 +104,10 @@ const Navbar = () => {
           <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
             <ul>
               {navItems.map((item, index) => (
-                <li key={index} className="py-4 text-lg lg:text-xl text-white">
+                <li
+                  key={index}
+                  className="py-4 text-lg lg:text-xl text-white hover:text-amber-400"
+                >
                   <a href={item.href}>{item.label}</a>
                 </li>
               ))}

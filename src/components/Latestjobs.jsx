@@ -29,7 +29,7 @@ const LatestJobs = () => {
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {jobs.map((job) => (
             <a key={job.sys.id} href="#" className="group">
-              <div className="border-2 bg-gray-200 rounded-3xl shadow-2xl shadow-black/40 relative overflow-hidden p-6 flex flex-col h-full hover:border-gray-400 transition duration-300">
+              <div className="border-2 bg-gray-200 rounded-3xl relative overflow-hidden p-6 flex flex-col h-full hover:border-gray-400 transition duration-300">
                 <div className="flex justify-between">
                   <span className="pr-2 block">
                     <span className="h-7 px-3 text-sm rounded-full whitespace-nowrap flex items-center font-medium bg-gray-300">

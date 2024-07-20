@@ -5,7 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         "hero-image":
-          "linear-gradient(rgba(42, 41, 48, 0.7), rgba(23, 23, 27, 0.5)), url('/assets/hero-img.jpg')",
+          "linear-gradient(rgba(42, 41, 48, 0.7), rgba(23, 23, 27, 0.5)), url('./assets/hero-img.jpg')",
       },
       backgroundColor: {
         "dark-background": "rgba(0, 0, 0, 0.8)",

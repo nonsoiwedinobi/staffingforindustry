@@ -41,10 +41,10 @@ body {
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-.bg-hero-image {
+/* .bg-hero-image {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
+} */
 

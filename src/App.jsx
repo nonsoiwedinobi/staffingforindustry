@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <>
-      <div className="bg-hero-image bg-cover bg-center min-h-screen">
+      <div className="overflow-x-hidden">
         <Navbar />
         <Hero />
         <Specialties />

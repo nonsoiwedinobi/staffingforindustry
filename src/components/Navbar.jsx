@@ -31,12 +31,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sticky top-0 z-50 py-3 border-neutral-700/80 overflow-x-hidden transition-colors duration-300 ${
+      className={`fixed left-0 right-0 top-0 z-50 py-3 border-neutral-700/80 overflow-x-hidden transition-colors duration-300 ${
         isScrolled ? "bg-black" : "bg-transparent"
       }`}
     >
       <div
-        className="container px-10 mx-auto relative lg:text-sm"
+        className="container px-4 mx-auto relative lg:text-sm"
         style={{ maxWidth: "100%", overflow: "visible" }}
       >
         <div className="flex justify-between items-center">

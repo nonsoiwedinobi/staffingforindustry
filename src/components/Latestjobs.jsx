@@ -94,19 +94,20 @@ const LatestJobs = () => {
                       <span className="h-7 px-3 text-sm rounded-full whitespace-nowrap flex items-center gap-2 font-medium bg-gray-300">
                         <span className="-ml-1.5">
                           <svg
-                            width="20"
-                            height="18"
-                            viewBox="0 0 20 18"
-                            fill="none"
                             xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="lucide lucide-euro"
                           >
-                            <path
-                              d="M9.16699 8.16667H5.16699C4.23357 8.16667 3.76686 8.16667 3.41034 8.34832C3.09674 8.50811 2.84177 8.76308 2.68198 9.07668C2.50033 9.4332 2.50033 9.89991 2.50033 10.8333V16.5M17.5003 16.5V4.16667C17.5003 3.23325 17.5003 2.76654 17.3187 2.41002C17.1589 2.09641 16.9039 1.84144 16.5903 1.68166C16.2338 1.5 15.7671 1.5 14.8337 1.5H11.8337C10.9002 1.5 10.4335 1.5 10.077 1.68166C9.7634 1.84144 9.50844 2.09641 9.34865 2.41002C9.16699 2.76654 9.16699 3.23325 9.16699 4.16667V16.5M18.3337 16.5H1.66699M12.0837 4.83333H14.5837M12.0837 8.16667H14.5837M12.0837 11.5H14.5837"
-                              stroke="currentColor"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            ></path>
+                            <path d="M4 10h12" />
+                            <path d="M4 14h9" />
+                            <path d="M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2" />
                           </svg>
                         </span>
                         <span>{job.fields.type}</span>

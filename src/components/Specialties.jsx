@@ -1,7 +1,7 @@
 const Specialties = () => {
   return (
     <div>
-      <section className="specialties py-12 bg-gray-200 mt-12">
+      <section className="specialties py-12 bg-gray-200">
         <h2 className="section-head text-center mb-12 font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-4xl text-sky-900">
           What We Offer
         </h2>

@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Specialties from "./components/Specialties";
 import Latestjobs from "./components/Latestjobs";
 import Navbar from "./components/Navbar";
@@ -8,23 +9,34 @@ import Reviews from "./components/Reviews";
 import Blog from "./components/Blog";
 import Callback from "./components/Callback";
 import Footer from "./components/Footer";
+import SubmitResume from "./components/SubmitResume";
+import ContactUs from "./components/ContactUs";
 
 const App = () => {
   return (
-    <>
-      <div className="overflow-x-hidden">
-        <Navbar />
-        <Hero />
-        <Specialties />
-        <Latestjobs />
-        <Solutions />
-        <Efficiency />
-        <Reviews />
-        <Blog />
-        <Callback />
-        <Footer />
-      </div>
-    </>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="overflow-x-hidden">
+              <Hero />
+              <Specialties />
+              <Latestjobs />
+              <Solutions />
+              <Efficiency />
+              <Reviews />
+              <Blog />
+              <Callback />
+            </div>
+          }
+        />
+        <Route path="/submit-resume" element={<SubmitResume />} />{" "}
+        <Route path="/contact-us" element={<ContactUs />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 };
 

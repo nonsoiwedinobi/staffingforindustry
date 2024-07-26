@@ -41,9 +41,12 @@ const Navbar = () => {
       >
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
-            <span className="text-2xl lg:text-3xl tracking-tight text-white">
+            <a
+              href="/"
+              className="text-2xl lg:text-3xl tracking-tight text-white"
+            >
               Staffing4Industry
-            </span>
+            </a>
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">
             {navItems.map((item, index) => (
@@ -59,7 +62,7 @@ const Navbar = () => {
           </ul>
           <div className="hidden lg:flex justify-center space-x-2 items-center relative">
             <a
-              href="#"
+              href="/submit-resume"
               className="bg-amber-400 py-2 px-3 rounded-lg whitespace-nowrap"
             >
               Submit Resume

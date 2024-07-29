@@ -3,7 +3,7 @@ import contactImage from "../assets/contactImage.jpg"; // Ensure this path is co
 
 const ContactUs = () => {
   return (
-    <div className="mb-12 bg-gray-400 px-[8%]">
+    <div className="mb-12 bg-gray-300 px-[8%]">
       {" "}
       <section className="flex flex-col lg:flex-row items-center justify-center h-full py-20">
         <div className="w-full lg:w-1/2 h-full">

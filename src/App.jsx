@@ -11,6 +11,9 @@ import Callback from "./components/Callback";
 import Footer from "./components/Footer";
 import SubmitResume from "./components/SubmitResume";
 import ContactUs from "./components/ContactUs";
+import Services from "./components/Services";
+import About from "./components/About";
+import Jobs from "./components/Jobs";
 
 const App = () => {
   return (
@@ -34,6 +37,9 @@ const App = () => {
         />
         <Route path="/submit-resume" element={<SubmitResume />} />{" "}
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/jobs" element={<Jobs />} />
       </Routes>
       <Footer />
     </Router>

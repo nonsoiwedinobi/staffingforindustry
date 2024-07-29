@@ -31,8 +31,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed left-0 right-0 top-0 z-50 py-3 border-neutral-700/80 overflow-x-hidden transition-colors duration-300 ${
-        isScrolled ? "bg-black" : "bg-transparent"
+      className={`fixed left-0 right-0 top-0 z-50 py-3 transition-colors duration-300 shadow-md ${
+        isScrolled ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
       <div
@@ -41,10 +41,7 @@ const Navbar = () => {
       >
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
-            <a
-              href="/"
-              className="text-2xl lg:text-3xl tracking-tight text-white"
-            >
+            <a href="/" className="text-2xl lg:text-3xl tracking-tight">
               Staffing4Industry
             </a>
           </div>
@@ -53,7 +50,7 @@ const Navbar = () => {
               <li key={index}>
                 <a
                   href={item.href}
-                  className="text-lg lg:text-xl text-white hover:text-amber-400"
+                  className="text-lg lg:text-xl hover:text-amber-400 transition-colors duration-300"
                 >
                   {item.label}
                 </a>
@@ -63,14 +60,18 @@ const Navbar = () => {
           <div className="hidden lg:flex justify-center space-x-2 items-center relative">
             <a
               href="/submit-resume"
-              className="bg-amber-400 py-2 px-3 rounded-lg whitespace-nowrap"
+              className="bg-amber-400 text-black py-2 px-3 rounded-lg whitespace-nowrap"
             >
               Submit Resume
             </a>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
-            <button onClick={toggleNavbar} className="text-white">
-              {mobileDrawerOpen ? <X /> : <Menu />}
+            <button onClick={toggleNavbar}>
+              {mobileDrawerOpen ? (
+                <X className={isScrolled ? "text-white" : "text-black"} />
+              ) : (
+                <Menu className={isScrolled ? "text-white" : "text-black"} />
+              )}
             </button>
           </div>
         </div>

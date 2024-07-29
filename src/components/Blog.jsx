@@ -57,6 +57,10 @@ const Blog = () => {
                 className="font-medium text-base hover:underline hover:text-tertiary flex items-center"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(post.fields.url, "_blank", "noopener,noreferrer");
+                }}
               >
                 Read More
                 <svg

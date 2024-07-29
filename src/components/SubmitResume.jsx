@@ -1,6 +1,6 @@
 const SubmitResume = () => {
   return (
-    <section className="py-12 bg-gray-400 px-[8%]" id="form">
+    <section className="py-12 bg-gray-300 px-[8%]" id="form">
       <div className="container mx-auto px-4">
         <h2 className="font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-4xl text-sky-900 text-center mb-4 mt-20">
           Submit Your Resume
@@ -11,7 +11,7 @@ const SubmitResume = () => {
         <form
           className="max-w-lg mx-auto p-8 rounded-lg"
           id="resume-form"
-          action="https://formspree.io/f/xnnanayl" // Replace with your form action URL
+          action="https://formspree.io/f/xnnanayl" 
           method="post"
           encType="multipart/form-data"
         >

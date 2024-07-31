@@ -16,9 +16,11 @@ const Efficiency = () => {
               tailored recruitment solutions and affordable pricing, we help
               businesses thrive in a competitive market.
             </p>
-            <button className="py-2 px-4 rounded-lg bg-amber-400 hover:bg-yellow-500 transition duration-300 cursor-pointer mx-auto lg:mx-0">
-              Learn More
-            </button>
+            <a href="/About">
+              <button className="py-2 px-4 rounded-lg bg-amber-400 hover:bg-yellow-500 transition duration-300 cursor-pointer mx-auto lg:mx-0">
+                Learn More
+              </button>
+            </a>
           </article>
           <div className="w-full lg:w-1/2 flex-1 p-4">
             <img

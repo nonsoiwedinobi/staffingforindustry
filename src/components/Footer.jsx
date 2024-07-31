@@ -21,22 +21,22 @@ const Footer = () => {
             <div className="w-full md:w-1/2 flex justify-between pt-10 md:pt-0">
               <ul className="list-none p-0">
                 <li className="mb-2">
-                  <a href="about.html" className="text-black hover:underline">
+                  <a href="/About" className="text-black hover:underline">
                     About us
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="about.html" className="text-black hover:underline">
+                  <a href="/Services" className="text-black hover:underline">
                     Services
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="about.html" className="text-black hover:underline">
+                  <a href="/Jobs" className="text-black hover:underline">
                     Jobs
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="about.html" className="text-black hover:underline">
+                  <a href="/Contact-us" className="text-black hover:underline">
                     Contact us
                   </a>
                 </li>
@@ -98,12 +98,6 @@ const Footer = () => {
                 className="text-black text-xl hover:text-yellow-500"
               >
                 <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="https://www.youtube.com/channel/UCB23323232"
-                className="text-black text-xl hover:text-yellow-500"
-              >
-                <i className="fab fa-youtube"></i>
               </a>
             </div>
           </div>

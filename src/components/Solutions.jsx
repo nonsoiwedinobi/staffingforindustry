@@ -52,9 +52,11 @@ const Solutions = () => {
               </p>
             </div>
           </div>
-          <button className="mt-10 py-2 px-4 bg-amber-400 hover:bg-yellow-500 rounded-lg transition duration-700 ease-in-out cursor-pointer">
-            Learn More
-          </button>
+          <a href="/Services">
+            <button className="mt-10 py-2 px-4 bg-amber-400 hover:bg-yellow-500 rounded-lg transition duration-700 ease-in-out cursor-pointer">
+              Learn More
+            </button>
+          </a>
         </div>
       </section>
     </div>

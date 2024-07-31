@@ -98,7 +98,7 @@ const Services = () => {
                 </div>
               ))}
             </div>
-            <p className="text overflow-auto mb-3 last:mb-0">
+            <p className="text-base overflow-auto mb-3 last:mb-0">
               At Staffing4Industry, we pride ourselves on delivering
               personalized and high-quality staffing solutions to our clients.
               Contact us today to learn more about our services and how we can

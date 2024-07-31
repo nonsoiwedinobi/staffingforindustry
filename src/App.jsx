@@ -14,6 +14,7 @@ import ContactUs from "./components/ContactUs";
 import Services from "./components/Services";
 import About from "./components/About";
 import Jobs from "./components/Jobs";
+import JobDetail from "./components/JobDetail";
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path="/job/:jobId" element={<JobDetail />} />
       </Routes>
       <Footer />
     </Router>

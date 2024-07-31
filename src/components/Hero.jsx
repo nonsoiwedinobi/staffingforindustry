@@ -18,13 +18,13 @@ const Hero = () => {
         </p>
         <div className="flex justify-center my-10">
           <a
-            href="#"
+            href="/Jobs"
             className="bg-sky-600 hover:bg-sky-700 py-3 px-9 mx-3 rounded-lg text-white transition duration-700 ease-in-out"
           >
             <span>Find job</span> <i className="fas fa-arrow-right ml-1"></i>
           </a>
           <a
-            href="#"
+            href="/Services"
             className="bg-amber-400 hover:bg-yellow-500 py-3 px-4 mx-3 rounded-lg transition duration-700 ease-in-out"
           >
             <span>Explore more</span>

@@ -62,7 +62,7 @@ const Job = () => {
   };
 
   return (
-    <section className="bg-white pb-20 pt-20">
+    <section className="bg-gray-100 pb-20 pt-20">
       <div className="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
         <h2 className="text-center text-sky-900 mb-10 mt-20 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
           Available Jobs

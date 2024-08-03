@@ -41,20 +41,20 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="about.html" className="text-black hover:underline">
+                  <a href="/faqs" className="text-black hover:underline">
                     FAQs
                   </a>
                 </li>
               </ul>
               <ul className="list-none p-0">
                 <li className="mb-2">
-                  <a href="about.html" className="text-black hover:underline">
+                  <a href="/blog" className="text-black hover:underline">
                     Blog
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="about.html" className="text-black hover:underline">
-                    Testimonials
+                  <a href="reviews-page" className="text-black hover:underline">
+                    Reviews
                   </a>
                 </li>
                 <li className="mb-2">
@@ -102,9 +102,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="w-full h-0.375 bg-black my-8"></div>
-          <p>
-            © 2024 Staffing4Industry.
-          </p>
+          <p>© 2024 Staffing4Industry.</p>
         </div>
       </footer>
     </div>

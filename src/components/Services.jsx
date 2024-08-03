@@ -19,7 +19,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="mb-12 bg-gray-300 px-[8%] relative">
+    <div className="mb-12 bg-gray-100 px-[8%] relative">
       <div className="max-w-full text-sky-900 font-bold pb-16 md:pb-24 mx-auto sm:px-6 sm:max-w-7xl lg:px-8 pt-20">
         <div className="flex flex-col items-center py-8">
           <p className="font-heading text-4xl md:text-5xl text-center">

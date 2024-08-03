@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import client from "../services/contentful/client";
 import "../index.css";
 
@@ -10,6 +11,8 @@ const Blog = () => {
       try {
         const response = await client.getEntries({
           content_type: "blogPost",
+          order: "fields.date", 
+          limit: 3, 
         });
         setPosts(response.items);
       } catch (error) {
@@ -28,6 +31,29 @@ const Blog = () => {
       <h2 className="text-2xl lg:text-4xl font-extrabold text-center mb-12 text-sky-900">
         Latest articles
       </h2>
+      <div className="flex justify-center mb-12">
+        <Link
+          to="/blog-page"
+          className="flex items-center font-bold text-base hover:underline hover:text-tertiary text-sky-900"
+        >
+          See more
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="ml-2"
+          >
+            <path d="M7 7h10v10" />
+            <path d="M7 17 17 7" />
+          </svg>
+        </Link>
+      </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
           <div
@@ -52,15 +78,9 @@ const Blog = () => {
                 {post.fields.title}
               </h4>
               <p className="text-sm mb-4">{post.fields.summary}</p>
-              <a
-                href={post.fields.url}
+              <Link
+                to={`/blog/${post.sys.id}`}
                 className="font-medium text-base hover:underline hover:text-tertiary flex items-center"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open(post.fields.url, "_blank", "noopener,noreferrer");
-                }}
               >
                 Read More
                 <svg
@@ -78,7 +98,7 @@ const Blog = () => {
                   <path d="M7 7h10v10" />
                   <path d="M7 17 17 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         ))}

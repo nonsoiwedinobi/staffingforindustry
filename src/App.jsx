@@ -15,6 +15,10 @@ import Services from "./components/Services";
 import About from "./components/About";
 import Jobs from "./components/Jobs";
 import JobDetail from "./components/JobDetail";
+import FAQs from "./components/FAQs";
+import ReviewsPage from "./components/ReviewsPage";
+import BlogPage from "./components/BlogPage";
+import BlogDetail from "./components/BlogDetail";
 
 const App = () => {
   return (
@@ -42,6 +46,10 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/job/:jobId" element={<JobDetail />} />
+        <Route path="/faqs" element={<FAQs />} />
+        <Route path="/reviews-page" element={<ReviewsPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:postId" element={<BlogDetail />} />
       </Routes>
       <Footer />
     </Router>

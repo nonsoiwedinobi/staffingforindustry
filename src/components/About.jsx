@@ -1,8 +1,16 @@
-import aboutImage from "../assets/aboutImage.jpg"; 
+import aboutImage from "../assets/aboutImage.jpg";
+import { Helmet } from "react-helmet-async"; 
 
 const About = () => {
   return (
     <div className="mb-10 bg-gray-100 px-[8%] relative">
+      <Helmet>
+        <title>About Us - Staffing4Industry</title>
+        <meta
+          name="description"
+          content="Learn more about Staffing4Industry, a specialized Recruitment Agency in Antwerpen, Belgium. We provide tailor-made recruitment services for various industries, focusing on engineering, manufacturing, and technical sales profiles."
+        />
+      </Helmet>
       <div className="max-w-full text-sky-900 pb-16 md:pb-24 mx-auto sm:px-6 sm:max-w-7xl lg:px-8">
         <div className="flex flex-col items-center pt-20">
           <p className="text-3xl font-bold text-center pt-10">About Us</p>

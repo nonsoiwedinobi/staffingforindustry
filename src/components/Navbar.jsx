@@ -60,7 +60,7 @@ const Navbar = () => {
           <div className="hidden lg:flex justify-center space-x-2 items-center relative">
             <a
               href="/submit-resume"
-              className="bg-amber-400 text-black py-2 px-3 rounded-lg whitespace-nowrap"
+              className="bg-amber-400 hover:bg-yellow-500 transition duration-700 text-black py-2 px-3 rounded-lg whitespace-nowrap"
             >
               Submit Resume
             </a>

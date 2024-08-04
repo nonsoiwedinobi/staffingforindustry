@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import client from "../services/contentful/client";
 import "../index.css";
@@ -29,6 +30,10 @@ const BlogDetail = () => {
 
   return (
     <div className="container mx-auto px-[8%] py-12 pt-20 mt-20">
+      <Helmet>
+        <title>{post.title} - Staffing4Industry</title>
+        <meta name="description" content={post.summary || "Blog post"} />
+      </Helmet>
       <header className="bg-sky-900 text-white py-6 px-4 rounded-lg mb-6">
         <h1 className="text-4xl font-bold">{post.title}</h1>
         <p className="text-lg">{post.date}</p>

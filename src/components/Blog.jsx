@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import client from "../services/contentful/client";
 import "../index.css";
 
@@ -11,8 +12,8 @@ const Blog = () => {
       try {
         const response = await client.getEntries({
           content_type: "blogPost",
-          order: "fields.date", 
-          limit: 3, 
+          order: "fields.date",
+          limit: 3,
         });
         setPosts(response.items);
       } catch (error) {
@@ -33,7 +34,7 @@ const Blog = () => {
       </h2>
       <div className="flex justify-center mb-12">
         <Link
-          to="/blog-page"
+          to="/blog"
           className="flex items-center font-bold text-base hover:underline hover:text-tertiary text-sky-900"
         >
           See more

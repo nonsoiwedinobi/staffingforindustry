@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import client from "../services/contentful/client";
 import "../index.css";
 
@@ -63,6 +64,13 @@ const Job = () => {
 
   return (
     <section className="bg-gray-100 pb-20 pt-20">
+      <Helmet>
+        <title>Latest Jobs - Staffing4Industry</title>
+        <meta
+          name="description"
+          content="Discover the latest job opportunities available at Staffing4Industry. Explore a variety of positions across multiple industries."
+        />
+      </Helmet>
       <div className="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
         <h2 className="text-center text-sky-900 mb-10 mt-20 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
           Available Jobs
@@ -98,7 +106,7 @@ const Job = () => {
 
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {filteredJobs.map((job) => (
-            <a key={job.sys.id} href="#" className="group">
+            <a key={job.sys.id} href={`/job/${job.sys.id}`} className="group">
               <div className="border-2 bg-gray-200 rounded-3xl relative overflow-hidden p-6 flex flex-col h-full hover:border-gray-400 transition duration-300">
                 <div className="flex justify-between">
                   <span className="pr-2 block">

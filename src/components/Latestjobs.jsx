@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import client from "../services/contentful/client";
 import "../index.css";
 

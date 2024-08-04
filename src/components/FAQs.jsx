@@ -1,6 +1,15 @@
+import { Helmet } from "react-helmet-async";
+
 const FAQs = () => {
   return (
     <div className="bg-gray-100 py-12 px-[8%] pt-20 mt-10">
+      <Helmet>
+        <title>FAQs - Staffing4Industry</title>
+        <meta
+          name="description"
+          content="Find answers to the most frequently asked questions about Staffing4Industry's services, pricing, and industry focus. Get in touch for more information."
+        />
+      </Helmet>
       <div className="container mx-auto">
         <h2 className="text-2xl lg:text-4xl font-extrabold mb-8 text-sky-900 text-center">
           Frequently Asked Questions
@@ -49,7 +58,7 @@ const FAQs = () => {
         <div className="flex justify-center mt-10">
           <a
             href="/contact-us"
-            className="bg-sky-600 hover:bg-sky-700 py-3 px-9 mx-3 rounded-lg text-white transition duration-700 ease-in-out"
+            className="bg-amber-400 hover:bg-yellow-500 py-3 px-9 mx-3 rounded-lg transition duration-700 ease-in-out"
           >
             <span>Contact Us</span>
           </a>

@@ -1,10 +1,17 @@
 import { Mail } from "lucide-react";
-import contactImage from "../assets/contactImage.jpg"; // Ensure this path is correct
+import { Helmet } from "react-helmet-async";
+import contactImage from "../assets/contactImage.jpg";
 
 const ContactUs = () => {
   return (
     <div className="mb-12 bg-gray-100 px-[8%]">
-      {" "}
+      <Helmet>
+        <title>Contact Us - Staffing4Industry</title>
+        <meta
+          name="description"
+          content="Get in touch with Staffing4Industry. Fill out the contact form to reach our team for inquiries, support, or more information about our services."
+        />
+      </Helmet>
       <section className="flex flex-col lg:flex-row items-center justify-center h-full py-20">
         <div className="w-full lg:w-1/2 h-full">
           <img

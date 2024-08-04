@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Specialties from "./components/Specialties";
 import Latestjobs from "./components/Latestjobs";
 import Navbar from "./components/Navbar";
@@ -22,37 +23,39 @@ import BlogDetail from "./components/BlogDetail";
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="overflow-x-hidden">
-              <Hero />
-              <Specialties />
-              <Latestjobs />
-              <Solutions />
-              <Efficiency />
-              <Reviews />
-              <Blog />
-              <Callback />
-            </div>
-          }
-        />
-        <Route path="/submit-resume" element={<SubmitResume />} />{" "}
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/jobs" element={<Jobs />} />
-        <Route path="/job/:jobId" element={<JobDetail />} />
-        <Route path="/faqs" element={<FAQs />} />
-        <Route path="/reviews-page" element={<ReviewsPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:postId" element={<BlogDetail />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="overflow-x-hidden">
+                <Hero />
+                <Specialties />
+                <Latestjobs />
+                <Solutions />
+                <Efficiency />
+                <Reviews />
+                <Blog />
+                <Callback />
+              </div>
+            }
+          />
+          <Route path="/submit-resume" element={<SubmitResume />} />{" "}
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/jobs" element={<Jobs />} />
+          <Route path="/job/:jobId" element={<JobDetail />} />
+          <Route path="/faqs" element={<FAQs />} />
+          <Route path="/reviews-page" element={<ReviewsPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:postId" element={<BlogDetail />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </HelmetProvider>
   );
 };
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import client from "../services/contentful/client";
 import "../index.css";
 
@@ -24,7 +25,13 @@ const JobDetail = () => {
 
   return (
     <div className="container mx-auto px-[8%] py-12 pt-20 mt-20">
-      {/* Custom Header Section */}
+      <Helmet>
+        <title>{job.title} - Job Details - Staffing4Industry</title>
+        <meta
+          name="description"
+          content={`Learn more about the ${job.title} position located in ${job.location}. Explore the job description, requirements, and how to apply.`}
+        />
+      </Helmet>
       <header className="bg-sky-900 text-white py-6 px-4 rounded-lg mb-6">
         <h1 className="text-4xl font-bold">{job.title}</h1>
         <p className="text-lg">{job.location}</p>

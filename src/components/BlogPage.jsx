@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import client from "../services/contentful/client";
 import "../index.css";
 
@@ -28,6 +30,13 @@ const BlogPage = () => {
 
   return (
     <div className="bg-white py-12 px-[8%] tracking-wide min-h-screen pt-20 mt-10">
+      <Helmet>
+        <title>Blog - Staffing4Industry</title>
+        <meta
+          name="description"
+          content="Explore the latest articles and insights on Staffing4Industry's blog. Stay updated with industry trends, tips, and more."
+        />
+      </Helmet>
       <h1 className="text-3xl lg:text-4xl font-extrabold text-center mb-12 text-sky-900">
         Latest Articles
       </h1>
@@ -60,7 +69,27 @@ const BlogPage = () => {
                   {post.fields.title}
                 </h4>
                 <p className="text-sm mb-4">{post.fields.summary}</p>
-
+                <Link
+                  to={`/blog/${post.sys.id}`}
+                  className="font-medium text-base hover:underline hover:text-tertiary flex items-center"
+                >
+                  Read More
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-2"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="M7 17 17 7" />
+                  </svg>
+                </Link>
               </div>
             </div>
           ))}

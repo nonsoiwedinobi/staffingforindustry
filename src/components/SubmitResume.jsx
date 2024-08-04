@@ -1,6 +1,15 @@
+import { Helmet } from "react-helmet-async";
+
 const SubmitResume = () => {
   return (
     <section className="py-12 bg-gray-300 px-[8%]" id="form">
+      <Helmet>
+        <title>Submit Your Resume - Staffing4Industry</title>
+        <meta
+          name="description"
+          content="Submit your resume to Staffing4Industry and connect with top employers in various industries. Fill out the form to apply for job opportunities."
+        />
+      </Helmet>
       <div className="container mx-auto px-4">
         <h2 className="font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-4xl text-sky-900 text-center mb-4 mt-20">
           Submit Your Resume
@@ -11,7 +20,7 @@ const SubmitResume = () => {
         <form
           className="max-w-lg mx-auto p-8 rounded-lg"
           id="resume-form"
-          action="https://formspree.io/f/xnnanayl" 
+          action="https://formspree.io/f/xnnanayl"
           method="post"
           encType="multipart/form-data"
         >
@@ -68,7 +77,7 @@ const SubmitResume = () => {
           </div>
           <button
             type="submit"
-            className="w-full py-2 rounded-lg bg-amber-400 hover:bg-yellow-500 transition duration-400"
+            className="w-full py-2 rounded-lg bg-amber-400 hover:bg-yellow-500 transition duration-700"
           >
             Submit
           </button>

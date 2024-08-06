@@ -1,13 +1,49 @@
+import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import React, { useState } from "react";
 
 const SubmitResume = () => {
+  const location = useLocation();
+  const jobTitle = location.state?.jobTitle || "General Application";
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [resume, setResume] = useState(null);
+  const [message, setMessage] = useState("");
+
+  const handleFileChange = (event) => {
+    setResume(event.target.files[0]);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append("fullName", fullName);
+    formData.append("email", email);
+    formData.append("subject", `Application for ${jobTitle}`);
+    formData.append("resume", resume);
+
+    try {
+      const response = await fetch("/send-email", {
+        method: "POST",
+        body: formData,
+      });
+      if (response.ok) {
+        setMessage("Your application has been submitted successfully.");
+      } else {
+        setMessage("There was an error submitting your application.");
+      }
+    } catch (error) {
+      setMessage("There was an error submitting your application.");
+    }
+  };
+
   return (
     <section className="py-12 bg-gray-300 px-[8%]" id="form">
       <Helmet>
         <title>Submit Your Resume - Staffing4Industry</title>
         <meta
           name="description"
-          content="Submit your resume to Staffing4Industry and connect with top employers in various industries. Fill out the form to apply for job opportunities."
+          content={`Submit your resume to apply for the position of ${jobTitle}. Join Staffing4Industry and connect with top employers in various industries.`}
         />
       </Helmet>
       <div className="container mx-auto px-4">
@@ -15,17 +51,19 @@ const SubmitResume = () => {
           Submit Your Resume
         </h2>
         <p className="text-center mb-8">
-          Please fill out the form below to submit your resume.
+          {`You are applying for the position of ${jobTitle}. Please fill out the form below to submit your resume.`}
         </p>
         <form
           className="max-w-lg mx-auto p-8 rounded-lg"
           id="resume-form"
-          action="https://formspree.io/f/xnnanayl"
-          method="post"
+          onSubmit={handleSubmit}
           encType="multipart/form-data"
         >
-          <input type="hidden" name="subject" value="New Resume Submission" />
-          <input type="checkbox" name="botcheck" className="hidden" />
+          <input
+            type="hidden"
+            name="subject"
+            value={`Application for ${jobTitle}`}
+          />
           <div className="mb-4">
             <label
               htmlFor="full-name"
@@ -37,6 +75,8 @@ const SubmitResume = () => {
               type="text"
               id="full-name"
               name="full-name"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -52,6 +92,8 @@ const SubmitResume = () => {
               type="email"
               id="email"
               name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -67,6 +109,7 @@ const SubmitResume = () => {
               type="file"
               id="resume"
               name="resume"
+              onChange={handleFileChange}
               accept=".pdf, .jpg, .doc"
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -81,7 +124,9 @@ const SubmitResume = () => {
           >
             Submit
           </button>
-          <div id="result" className="mt-4"></div>
+          <div id="result" className="mt-4 text-center">
+            {message}
+          </div>
         </form>
       </div>
     </section>

@@ -14,7 +14,6 @@ const Footer = () => {
               </p>
               <div className="mb-1">
                 <p className="font-bold text-black mb-1">Contact:</p>
-                <p className="text-black">+32465220659</p>
                 <p className="text-black">info@staffing4industry.com</p>
               </div>
             </div>
@@ -58,18 +57,8 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="about.html" className="text-black hover:underline">
-                    Careers
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a href="about.html" className="text-black hover:underline">
-                    Partners
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a href="about.html" className="text-black hover:underline">
-                    Resources
+                  <a href="privacy-policy" className="text-black hover:underline">
+                    Privacy
                   </a>
                 </li>
               </ul>
@@ -80,12 +69,6 @@ const Footer = () => {
                 className="text-black text-xl hover:text-yellow-500"
               >
                 <i className="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/staffing4industry/"
-                className="text-black text-xl hover:text-yellow-500"
-              >
-                <i className="fab fa-instagram"></i>
               </a>
               <a
                 href="https://twitter.com/staffing4industry"

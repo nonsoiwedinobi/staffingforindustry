@@ -20,6 +20,7 @@ import FAQs from "./components/FAQs";
 import ReviewsPage from "./components/ReviewsPage";
 import BlogPage from "./components/BlogPage";
 import BlogDetail from "./components/BlogDetail";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 const App = () => {
   return (
@@ -52,6 +53,7 @@ const App = () => {
           <Route path="/reviews-page" element={<ReviewsPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:postId" element={<BlogDetail />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
       </Router>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import client from "../services/contentful/client";
 import "../index.css";
@@ -7,6 +7,7 @@ import "../index.css";
 const JobDetail = () => {
   const { jobId } = useParams();
   const [job, setJob] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchJob = async () => {
@@ -22,6 +23,10 @@ const JobDetail = () => {
   }, [jobId]);
 
   if (!job) return <div>Loading...</div>;
+
+  const handleApplyNow = () => {
+    navigate("/submit-resume", { state: { jobTitle: job.title } });
+  };
 
   return (
     <div className="container mx-auto px-[8%] py-12 pt-20 mt-20">
@@ -52,16 +57,15 @@ const JobDetail = () => {
           </li>
           <li>
             <strong>Salary:</strong> €{job.salary}
-          </li>{" "}
-          {/* Displaying Euro sign with salary */}
+          </li>
         </ul>
 
-        <a
-          href={job.applyLink}
+        <button
+          onClick={handleApplyNow}
           className="bg-amber-400 text-black py-2 px-4 rounded-lg font-medium hover:bg-amber-500"
         >
           Apply Now
-        </a>
+        </button>
       </section>
     </div>
   );

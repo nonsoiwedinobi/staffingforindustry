@@ -16,11 +16,7 @@ const ReviewsPage = () => {
             <div className="rounded-md p-6 bg-white shadow-md">
               <p className="text-md text-gray-800">{testimonial.text}</p>
               <div className="flex mt-8 items-center">
-                <img
-                  className="w-12 h-12 mr-6 rounded-full border border-neutral-300"
-                  src={testimonial.image}
-                  alt={testimonial.user}
-                />
+                
                 <div>
                   <h6 className="font-semibold text-gray-900">
                     {testimonial.user}

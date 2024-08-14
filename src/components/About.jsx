@@ -25,30 +25,36 @@ const About = () => {
           </div>
           <div className="w-full lg:w-1/2 ">
             <p className="text-lg overflow-auto mb-2 last:mb-0">
-              Staffing4Industry is a specialized Recruitment Agency based in
-              Antwerpen, Belgium. We assist Industrial, Manufacturing, Chemical,
-              Life sciences, and Technology companies in Belgium in the search
-              for Engineering, Manufacturing, and Technical Sales profiles like:
-              Technicians, Engineers, Managers, and Directors. It’s our aim to
-              help companies achieve their business & Employment fulfillment
-              goals, by providing different tailor-made recruitment services for
-              affordable prices which are on average between 10% to 20% lower in
-              pricing than most recruitment agencies.
+              Staffing4Industry is a specialized recruitment agency based in
+              Antwerp, Belgium, dedicated to serving the Industrial,
+              Manufacturing, Chemical, Life Sciences, and Technology sectors. We
+              excel at connecting businesses with top talent.
+            </p>
+            <p className="text-lg overflow-auto mb-2 last:mb-0">
+              Our mission is to help companies achieve their business and
+              employment goals through tailored recruitment services. We pride
+              ourselves on our deep industry knowledge and proven track record
+              of matching the right talent with the right opportunities,
+              ensuring long-term success for both our clients and candidates.
+            </p>
+            <p className="text-lg overflow-auto mb-2 last:mb-0">
+              Partner with Staffing4Industry and experience the difference that
+              expertise and dedication can make in your recruitment process.
             </p>
           </div>
         </section>
         <section className="py-8">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-center mb-6 text-sky-900">
-              Mission Statement
+              Mission Statement It’s
             </h2>
             <p className="text-lg overflow-auto mb-3 last:mb-0 ">
-              It’s our mission to staff beautiful industrial companies in the
-              Benelux with the best technical employees available within the
-              industry. We want to connect experienced professionals that are
-              talented, motivated, and driven to excel in their work with
-              amazing companies by opening up opportunities for both parties as
-              a specialized intermediate party.
+              Our mission is to staff the leading industrial companies in the
+              Benelux region with the best technical talent available in the
+              industry. We are committed to connecting skilled, motivated, and
+              driven professionals with exceptional companies, creating valuable
+              opportunities for both parties through our specialized recruitment
+              services.
             </p>
           </div>
           <div className="mb-12">
@@ -56,11 +62,11 @@ const About = () => {
               Vision Statement
             </h2>
             <p className="text-lg overflow-auto mb-3 last:mb-0 ">
-              We are dedicated to providing the best permanent or contracting
-              staffing solutions for you as a technical professional and you as
-              an employer. By building long-term client and candidate
-              relationships, we try hard to be a partner and trusted advisor in
-              your business or career progression.
+              We are committed to delivering the best permanent and contract
+              staffing solutions for technical professionals and employers
+              alike. By fostering long-term relationships with our clients and
+              candidates, we strive to be a trusted partner and advisor in your
+              business success and career advancement.
             </p>
           </div>
           <div className="mb-12">
@@ -69,32 +75,31 @@ const About = () => {
             </h2>
             <ul className="list-disc pl-5 text-lg space-y-3">
               <li>
-                <strong>Integrity:</strong> We follow the highest standards of
-                professional ethics, openness, and honesty.
+                <strong>Integrity:</strong> We adhere to the highest standards
+                of professional ethics, transparency, and honesty.
               </li>
               <li>
-                <strong>Respect:</strong> We always treat others the way we
-                would like to be treated.
+                <strong>Respect:</strong> We treat others with the same respect
+                we expect for ourselves.
               </li>
               <li>
-                <strong>Accountability:</strong> We take ownership and
-                initiatives in seizing opportunities, and honor our promises and
+                <strong>Accountability:</strong> We take ownership of our
+                actions, seize opportunities, and fulfill our promises and
                 commitments.
               </li>
               <li>
-                <strong>Boldness:</strong> We are driven, ambitious,
-                enthusiastic, and adventurous, and are not afraid to learn from
-                failure.
+                <strong>Boldness:</strong> We are ambitious, enthusiastic, and
+                unafraid to learn from failure as we strive for excellence.
               </li>
               <li>
-                <strong>Commitment:</strong> We are committed to providing
-                solutions for our customers. We exist to meet and solve the
-                challenges that our customers face.
+                <strong>Commitment:</strong> We are dedicated to solving the
+                challenges our customers face by providing tailored staffing
+                solutions.
               </li>
               <li>
                 <strong>Professionalism:</strong> We are seasoned professionals,
-                continuously educating ourselves and preparing for the
-                challenges ahead.
+                continuously enhancing our skills and preparing for future
+                challenges.
               </li>
             </ul>
           </div>

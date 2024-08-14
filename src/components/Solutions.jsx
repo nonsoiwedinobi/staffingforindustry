@@ -10,10 +10,13 @@ const Solutions = () => {
             Why Choose Staffing4Industry for Your Recruitment Needs
           </p>
           <p className="text-base mb-10 mx-auto w-full sm:w-6/12 text-black truncate-lines">
-            At Staffing4Industry, we offer affordable and tailor-made
-            recruitment services with expertise in various industries. Our
-            pricing is 10-20% lower than our competitors, ensuring you get the
-            best value for your investment.
+            At Staffing4Industry, we offer customized recruitment solutions
+            tailored to various industries with unparalleled expertise. Our
+            dedicated team leverages deep industry knowledge and extensive
+            networks to connect you with top-tier talent, ensuring a perfect
+            match for your business needs. Choose us for personalized service
+            and a commitment to driving your success through strategic staffing
+            solutions.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-11/12 mx-auto">
             <div className="bg-white rounded-lg p-5 flex flex-col items-center justify-center text-center">

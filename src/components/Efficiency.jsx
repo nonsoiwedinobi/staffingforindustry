@@ -11,10 +11,11 @@ const Efficiency = () => {
               Unlocking Potential, Driving Success for Businesses
             </h3>
             <p className="text-sm lg:text-base mb-8 text-black">
-              Our services provide companies with the right talent, enabling
-              them to achieve their business and employment goals. With our
-              tailored recruitment solutions and affordable pricing, we help
-              businesses thrive in a competitive market.
+              Our recruitment services empower companies to secure the right
+              talent, helping them achieve their business and employment goals.
+              Through customized staffing solutions, we enable businesses to
+              thrive in a competitive market by connecting them with the skilled
+              professionals they need to succeed.
             </p>
             <a href="/About">
               <button className="py-2 px-4 rounded-lg bg-amber-400 hover:bg-yellow-500 transition duration-300 cursor-pointer mx-auto lg:mx-0">

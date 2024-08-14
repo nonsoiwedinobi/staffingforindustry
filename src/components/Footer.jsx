@@ -33,8 +33,7 @@ const Footer = () => {
                   <a
                     href="https://staffing4industry.app.loxo.co/staffing4industry"
                     className="text-black hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    
                   >
                     Jobs
                   </a>

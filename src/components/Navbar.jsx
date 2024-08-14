@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { navItems } from "../constants/";
+import logo from "../assets/logo.jpg";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Navbar = () => {
@@ -42,7 +43,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <a href="/" className="text-2xl lg:text-3xl tracking-tight">
-              Staffing4Industry
+              <img src={logo} alt="Staffing4Industry Logo" className="h-8 w-auto lg:h-10 /"></img>
             </a>
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">
@@ -51,8 +52,6 @@ const Navbar = () => {
                 <a
                   href={item.href}
                   className="text-lg lg:text-xl hover:text-amber-400 transition-colors duration-300"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   {item.label}
                 </a>
@@ -63,8 +62,6 @@ const Navbar = () => {
             <a
               href="https://staffing4industry.app.loxo.co/staffing4industry"
               className="bg-amber-400 hover:bg-yellow-500 transition duration-700 text-black py-2 px-3 rounded-lg whitespace-nowrap"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Apply Now
             </a>
@@ -96,8 +93,6 @@ const Navbar = () => {
                   <a
                     href={item.href}
                     onClick={toggleNavbar}
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
                     {item.label}
                   </a>
@@ -108,8 +103,6 @@ const Navbar = () => {
               <a
                 href="https://staffing4industry.app.loxo.co/staffing4industry"
                 className="py-2 px-3 bg-amber-400 rounded-lg"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 Apply Now
               </a>

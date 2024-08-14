@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Specialties from "./components/Specialties";
-import Latestjobs from "./components/Latestjobs";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Solutions from "./components/Solutions";
@@ -34,9 +33,8 @@ const App = () => {
               <div className="overflow-x-hidden">
                 <Hero />
                 <Specialties />
-                <Latestjobs />
-                <Solutions />
                 <Efficiency />
+                <Solutions />
                 <Reviews />
                 <Blog />
                 <Callback />

@@ -30,7 +30,12 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="/Jobs" className="text-black hover:underline">
+                  <a
+                    href="https://staffing4industry.app.loxo.co/staffing4industry"
+                    className="text-black hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Jobs
                   </a>
                 </li>
@@ -57,7 +62,10 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="privacy-policy" className="text-black hover:underline">
+                  <a
+                    href="privacy-policy"
+                    className="text-black hover:underline"
+                  >
                     Privacy
                   </a>
                 </li>

@@ -18,8 +18,10 @@ const Hero = () => {
         </p>
         <div className="flex justify-center my-10">
           <a
-            href="/Jobs"
+            href="https://staffing4industry.app.loxo.co/staffing4industry"
             className="bg-sky-600 hover:bg-sky-700 py-3 px-9 mx-3 rounded-lg text-white transition duration-700 ease-in-out"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <span>Find job</span> <i className="fas fa-arrow-right ml-1"></i>
           </a>

@@ -51,6 +51,8 @@ const Navbar = () => {
                 <a
                   href={item.href}
                   className="text-lg lg:text-xl hover:text-amber-400 transition-colors duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {item.label}
                 </a>
@@ -59,10 +61,12 @@ const Navbar = () => {
           </ul>
           <div className="hidden lg:flex justify-center space-x-2 items-center relative">
             <a
-              href="/submit-resume"
+              href="https://staffing4industry.app.loxo.co/staffing4industry"
               className="bg-amber-400 hover:bg-yellow-500 transition duration-700 text-black py-2 px-3 rounded-lg whitespace-nowrap"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Submit Resume
+              Apply Now
             </a>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
@@ -89,15 +93,25 @@ const Navbar = () => {
                   key={index}
                   className="py-4 text-lg lg:text-xl text-white hover:text-amber-400"
                 >
-                  <a href={item.href} onClick={toggleNavbar}>
+                  <a
+                    href={item.href}
+                    onClick={toggleNavbar}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {item.label}
                   </a>
                 </li>
               ))}
             </ul>
             <div className="flex space-x-6 mt-4">
-              <a href="#" className="py-2 px-3 bg-amber-400 rounded-lg">
-                Submit Resume
+              <a
+                href="https://staffing4industry.app.loxo.co/staffing4industry"
+                className="py-2 px-3 bg-amber-400 rounded-lg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apply Now
               </a>
             </div>
           </div>

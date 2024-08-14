@@ -3,7 +3,7 @@ import { testimonials } from "../constants/";
 const Reviews = () => {
   return (
     <div>
-      <div className="bg-gray-200 py-12 px-[8%] tracking-wide">
+      <div className="bg-white py-12 px-[8%] tracking-wide">
         <h2 className="text-2xl lg:text-4xl font-extrabold text-center my-5 lg:my-10 text-sky-900">
           What people are saying
         </h2>

@@ -24,7 +24,11 @@ const ContactUs = () => {
           <h2 className="text-3xl font-bold text-center mb-6 mt-10 text-sky-900">
             Contact Us
           </h2>
-          <form className="max-w-lg mx-auto">
+          <form
+            className="max-w-lg mx-auto"
+            action="https://formspree.io/f/xnnanayl"
+            method="post"
+          >
             <div className="mb-4">
               <label
                 htmlFor="first-name"

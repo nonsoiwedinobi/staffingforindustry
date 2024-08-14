@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 
 const SubmitResume = () => {
@@ -12,29 +13,6 @@ const SubmitResume = () => {
 
   const handleFileChange = (event) => {
     setResume(event.target.files[0]);
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData();
-    formData.append("fullName", fullName);
-    formData.append("email", email);
-    formData.append("subject", `Application for ${jobTitle}`);
-    formData.append("resume", resume);
-
-    try {
-      const response = await fetch("/send-email", {
-        method: "POST",
-        body: formData,
-      });
-      if (response.ok) {
-        setMessage("Your application has been submitted successfully.");
-      } else {
-        setMessage("There was an error submitting your application.");
-      }
-    } catch (error) {
-      setMessage("There was an error submitting your application.");
-    }
   };
 
   return (
@@ -56,8 +34,9 @@ const SubmitResume = () => {
         <form
           className="max-w-lg mx-auto p-8 rounded-lg"
           id="resume-form"
-          onSubmit={handleSubmit}
           encType="multipart/form-data"
+          action="https://formspree.io/f/xnnanayl"
+          method="post"
         >
           <input
             type="hidden"

@@ -25,7 +25,7 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className="bg-white py-12 px-[8%] tracking-wide">
+    <div className="bg-gray-200 py-12 px-[8%] tracking-wide">
       <h4 className="text-2xl font-semibold text-center mb-4 text-amber-400">
         Our Blog
       </h4>

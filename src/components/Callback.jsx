@@ -1,6 +1,6 @@
 const Callback = () => {
   return (
-    <section className="py-12 bg-gray-200 px-[8%]" id="form">
+    <section className="py-12 bg-white px-[8%] border-b" id="form">
       <div className="container mx-auto px-4">
         <h2 className="font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-4xl text-sky-900 text-center mb-4">
           Request a Call Back

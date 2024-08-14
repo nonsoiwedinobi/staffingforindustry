@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { navItems } from "../constants/";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Navbar = () => {
@@ -32,18 +32,18 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed left-0 right-0 top-0 z-50 py-3 transition-colors duration-300 shadow-md ${
+      className={`fixed left-0 right-0 top-0 z-50 transition-colors duration-300 shadow-md ${
         isScrolled ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
       <div
-        className="container px-4 mx-auto relative lg:text-sm"
+        className="container px-6 mx-auto relative lg:text-sm"
         style={{ maxWidth: "100%", overflow: "visible" }}
       >
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <a href="/" className="text-2xl lg:text-3xl tracking-tight">
-              <img src={logo} alt="Staffing4Industry Logo" className="h-8 w-auto lg:h-10 /"></img>
+              <img src={logo} alt="Staffing4Industry Logo" className="h-20 w-auto lg:h-55 /"></img>
             </a>
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">

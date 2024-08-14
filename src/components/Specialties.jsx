@@ -12,12 +12,12 @@ const Specialties = () => {
               chemical, life sciences, and technology sectors.
             </h2>
             <p className="specialties-text text-sky-900 text-base leading-6">
-              At Staffing4Industry, we offer tailored recruitment solutions to
-              meet the unique needs of companies in the industrial,
+              At Staffing4Industry, we provide customized recruitment solutions
+              designed to meet the unique needs of companies in the industrial,
               manufacturing, chemical, life sciences, and technology sectors.
-              Our team of experts understands the specific requirements of these
-              industries and works diligently to connect businesses with
-              top-notch talent.
+              Our team of experts has in-depth knowledge of these industries,
+              enabling us to connect businesses with top-tier talent that aligns
+              perfectly with their specific requirements.
             </p>
           </article>
           <div className="flex-1 min-w-[300px]">

@@ -2,8 +2,8 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen w-full h-screen bg-hero-image bg-cover bg-center overflow-hidden">
       {/* <div className="absolute inset-0 z-0"></div> */}
-      <div className="relative flex flex-col items-center justify-center h-full z-10 mt-10 overflow-hidden px-4 lg:px-8 pt-10">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl text-center tracking-wide mx-auto text-white pt-20">
+      <div className="relative flex flex-col items-center justify-center h-full z-10 mt-10 overflow-hidden pt-10">
+        <h1 className="text-4xl sm:text-5xl lg:text-8xl text-center tracking-wide mx-auto text-white pt-20">
           Connecting top talent
           <span className="bg-gradient-to-r from-amber-400 to-amber-700 text-transparent bg-clip-text">
             {" "}

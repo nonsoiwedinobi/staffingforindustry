@@ -42,8 +42,12 @@ const Navbar = () => {
       >
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
-            <a href="/" className="text-2xl lg:text-3xl tracking-tight">
-              <img src={logo} alt="Staffing4Industry Logo" className="h-20 w-auto lg:h-55 /"></img>
+            <a href="/" className="tracking-tight">
+              <img
+                src={logo}
+                alt="Staffing4Industry Logo"
+                className="h-20 lg:h-24 w-auto max-w-full"
+              />
             </a>
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">
@@ -90,10 +94,7 @@ const Navbar = () => {
                   key={index}
                   className="py-4 text-lg lg:text-xl text-white hover:text-amber-400"
                 >
-                  <a
-                    href={item.href}
-                    onClick={toggleNavbar}
-                  >
+                  <a href={item.href} onClick={toggleNavbar}>
                     {item.label}
                   </a>
                 </li>

@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png';
+
 const Footer = () => {
   return (
     <div>
@@ -5,8 +7,12 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between flex-wrap">
             <div className="w-full md:w-1/2 mb-8 md:mb-0">
-              <h3 className="text-3xl font-bold mb-7 no-translate text-sky-900">
-                Staffing4Industry
+              <h3 className="mb-7 no-translate">
+                <img
+                  src={logo}
+                  alt="Staffing4Industry Logo"
+                  className="h-20 lg:h-20 w-auto max-w-full"
+                />
               </h3>
               <p className="text-black mb-1 font-bold">Location:</p>
               <p className="text-black mb-4">
@@ -33,7 +39,6 @@ const Footer = () => {
                   <a
                     href="https://staffing4industry.app.loxo.co/staffing4industry"
                     className="text-black hover:underline"
-                    
                   >
                     Jobs
                   </a>

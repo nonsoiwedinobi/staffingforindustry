@@ -94,11 +94,12 @@ const Navbar = () => {
             >
               <X />
             </button>
-            <ul>
+
+            <ul className="flex flex-col items-center space-y-4">
               {navItems.map((item, index) => (
                 <li
                   key={index}
-                  className="py-4 text-lg lg:text-xl text-white hover:text-amber-400"
+                  className="text-lg lg:text-xl text-white hover:text-amber-400"
                 >
                   <a href={item.href} onClick={toggleNavbar}>
                     {item.label}
@@ -106,12 +107,14 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex space-x-6 mt-4">
-              {/* Language Selector added here */}
+
+            <div className="flex flex-col items-center space-y-4 mt-8 w-full px-4">
+              {/* Language Selector */}
               <LanguageSelector />
+
               <a
                 href="https://staffing4industry.app.loxo.co/staffing4industry"
-                className="py-2 px-3 bg-amber-400 rounded-lg"
+                className="py-2 px-6 w-full text-center bg-amber-400 rounded-lg"
               >
                 Apply Now
               </a>

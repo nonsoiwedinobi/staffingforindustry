@@ -77,11 +77,10 @@ const LanguageSelector = () => {
     }
   };
 
-
   return (
     <div className="relative language-selector">
       <button
-        className="lang-btn py-7 px-3 rounded-lg text-black text-lg"
+        className="lang-btn py-7 px-3 rounded-lg text-lg text-white lg:text-black" // White text on mobile, black on large screens
         onClick={toggleDropdown}
       >
         {selectedLanguage} <span className="arrow-icon">{arrowIcon}</span>

@@ -2,9 +2,25 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const LanguageSelector = () => {
+  const languageMap = {
+    en: "English",
+    fr: "French",
+    nl: "Dutch",
+  };
+
+  // Retrieve the language code from localStorage and map it to the full name
+  const storedLanguageCode = localStorage.getItem("selectedLanguage") || "en";
+  const [selectedLanguage, setSelectedLanguage] = useState(
+    languageMap[storedLanguageCode]
+  );
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("English");
   const [arrowIcon, setArrowIcon] = useState("▼");
+
+  useEffect(() => {
+    const storedLanguageCode = localStorage.getItem("selectedLanguage") || "en";
+    setSelectedLanguage(languageMap[storedLanguageCode]);
+    translatePage(storedLanguageCode);
+  }, []);
 
   const toggleDropdown = (e) => {
     e.stopPropagation();
@@ -12,11 +28,12 @@ const LanguageSelector = () => {
     setArrowIcon(dropdownVisible ? "▼" : "▲");
   };
 
-  const selectLanguage = async (language, text) => {
-    setSelectedLanguage(text);
+  const selectLanguage = async (languageCode) => {
+    setSelectedLanguage(languageMap[languageCode]);
     setDropdownVisible(false);
     setArrowIcon("▼");
-    await translatePage(language);
+    localStorage.setItem("selectedLanguage", languageCode); // Save language code to localStorage
+    await translatePage(languageCode);
   };
 
   const handleClickOutside = (e) => {
@@ -34,6 +51,7 @@ const LanguageSelector = () => {
   }, []);
 
   const translatePage = async (targetLanguage) => {
+    console.log("Translating page to:", targetLanguage);
     const elementsToTranslate = document.querySelectorAll(
       "body *:not(script):not(style):not(meta):not(link):not(img)"
     );
@@ -80,31 +98,22 @@ const LanguageSelector = () => {
   return (
     <div className="relative language-selector">
       <button
-        className="lang-btn py-7 px-3 rounded-lg text-lg text-white lg:text-black" // White text on mobile, black on large screens
+        className="lang-btn py-7 px-3 rounded-lg text-lg text-white lg:text-black"
         onClick={toggleDropdown}
       >
         {selectedLanguage} <span className="arrow-icon">{arrowIcon}</span>
       </button>
       {dropdownVisible && (
         <ul className="dropdown absolute right-0 mt-2 py-2 w-40 bg-white rounded-lg shadow-lg z-20 text-lg">
-          <li
-            className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-            onClick={() => selectLanguage("en", "English")}
-          >
-            English
-          </li>
-          <li
-            className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-            onClick={() => selectLanguage("fr", "French")}
-          >
-            French
-          </li>
-          <li
-            className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-            onClick={() => selectLanguage("nl", "Dutch")}
-          >
-            Dutch
-          </li>
+          {Object.keys(languageMap).map((code) => (
+            <li
+              key={code}
+              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              onClick={() => selectLanguage(code)}
+            >
+              {languageMap[code]}
+            </li>
+          ))}
         </ul>
       )}
     </div>

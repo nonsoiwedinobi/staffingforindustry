@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { navItems } from "../constants/";
 import logo from "../assets/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import LanguageSelector from "./LanguageSelector"; // Import the LanguageSelector component
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -10,7 +11,7 @@ const Navbar = () => {
 
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
-    document.body.style.overflow = mobileDrawerOpen ? "auto" : "hidden";
+    document.body.style.overflow = mobileDrawerOpen ? "hidden" : "auto";
   };
 
   useEffect(() => {
@@ -64,7 +65,10 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="hidden lg:flex justify-center space-x-2 items-center relative">
+          <div className="hidden lg:flex justify-center space-x-4 items-center relative">
+            {/* Language Selector added here */}
+            <LanguageSelector />
+
             <a
               href="https://staffing4industry.app.loxo.co/staffing4industry"
               className="bg-amber-400 hover:bg-yellow-500 transition duration-700 text-black py-2 px-3 rounded-lg whitespace-nowrap"

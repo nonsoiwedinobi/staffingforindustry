@@ -46,7 +46,7 @@ const About = () => {
         <section className="py-8">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-center mb-6 text-sky-900">
-              Mission Statement It’s
+              Mission Statement
             </h2>
             <p className="text-lg overflow-auto mb-3 last:mb-0 ">
               Our mission is to staff the leading industrial companies in the

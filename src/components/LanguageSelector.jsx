@@ -37,7 +37,9 @@ const LanguageSelector = () => {
     const elementsToTranslate = document.querySelectorAll(
       "body *:not(script):not(style):not(meta):not(link):not(img)"
     );
+
     const textsToTranslate = [];
+    const elementsMap = new Map();
 
     elementsToTranslate.forEach((element) => {
       if (
@@ -45,35 +47,36 @@ const LanguageSelector = () => {
         element.childNodes[0].nodeType === 3
       ) {
         textsToTranslate.push(element.innerText);
+        elementsMap.set(textsToTranslate.length - 1, element);
       }
     });
 
     try {
-      const translations = await Promise.all(
-        textsToTranslate.map(async (text) => {
-          const response = await axios.post(
-            `https://translation.googleapis.com/language/translate/v2?key=${config.GOOGLE_API_KEY}`,
-            {
-              q: text,
-              target: targetLanguage,
-            }
-          );
-          return response.data.data.translations[0].translatedText;
-        })
+      const response = await axios.post(
+        `https://translation.googleapis.com/language/translate/v2?key=${
+          import.meta.env.VITE_GOOGLE_API_KEY
+        }`,
+        {
+          q: textsToTranslate,
+          target: targetLanguage,
+        }
       );
 
-      elementsToTranslate.forEach((element, index) => {
-        if (
-          element.childNodes.length === 1 &&
-          element.childNodes[0].nodeType === 3
-        ) {
-          element.innerText = translations[index];
+      const translations = response.data.data.translations.map(
+        (t) => t.translatedText
+      );
+
+      translations.forEach((translatedText, index) => {
+        const element = elementsMap.get(index);
+        if (element) {
+          element.innerText = translatedText;
         }
       });
     } catch (error) {
       console.error("Translation error: ", error);
     }
   };
+
 
   return (
     <div className="relative language-selector">

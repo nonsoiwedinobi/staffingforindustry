@@ -107,6 +107,8 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="flex space-x-6 mt-4">
+              {/* Language Selector added here */}
+              <LanguageSelector />
               <a
                 href="https://staffing4industry.app.loxo.co/staffing4industry"
                 className="py-2 px-3 bg-amber-400 rounded-lg"

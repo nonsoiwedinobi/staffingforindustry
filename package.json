@@ -2,7 +2,7 @@
   "name": "staffingforindustry",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://nonsoiwedinobi.github.io/staffingforindustry",
+  "homepage": "https://staffing4industry.com/",
   "type": "module",
   "scripts": {
     "build": "vite build",
